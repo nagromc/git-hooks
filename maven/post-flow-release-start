@@ -18,7 +18,7 @@ ORIGIN=$2
 BRANCH=$3
 BASE=$4
 
-./mvnw versions:set -DnewVersion=$VERSION-SNAPSHOT
+./mvnw versions:set -DnewVersion=$VERSION-SNAPSHOT -DgenerateBackupPoms=false
 git commit --all --message="build: bump version number to $VERSION-SNAPSHOT"
 
 exit 0

@@ -16,7 +16,7 @@ VERSION=$1
 ORIGIN=$2
 BRANCH=$3
 
-./mvnw versions:set -DnextSnapshot -DnextSnapshotIndexToIncrement=2
+./mvnw versions:set -DnextSnapshot -DnextSnapshotIndexToIncrement=2 -DgenerateBackupPoms=false
 git commit --all --message="build: bump version number to next snapshot"
 
 exit 0
