@@ -2,6 +2,28 @@
 
 My collection of Git hooks.
 
+## Prerequisite
+
+If you want to use [Husky](https://typicode.github.io/husky/), make sure it is installed:
+
+* Local installation
+
+    ```shell
+    npm install husky
+    ```
+
+* Global installation
+
+    ```shell
+    npm install --global husky
+    ```
+
+Then, run the following command to initialize Husky in your current project:
+
+```shell
+npx husky
+```
+
 ## Usage
 
 Copy the content of a directory in:
