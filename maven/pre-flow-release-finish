@@ -16,7 +16,9 @@ VERSION=$1
 ORIGIN=$2
 BRANCH=$3
 
-./mvnw versions:set -DnewVersion=$VERSION -DgenerateBackupPoms=false
+. "$(dirname "$0")/maven-common.sh"
+
+$MAVEN_CMD versions:set -DnewVersion=$VERSION -DgenerateBackupPoms=false
 git commit --all --message="build: bump version number to $VERSION"
 
 # To terminate the git-flow action, return a non-zero exit code.
