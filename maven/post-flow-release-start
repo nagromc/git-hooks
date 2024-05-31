@@ -20,7 +20,7 @@ BASE=$4
 
 . "$(dirname "$0")/maven-common.sh"
 
-$MAVEN_CMD versions:set -DnewVersion=$VERSION-SNAPSHOT -DgenerateBackupPoms=false
+$MAVEN_CMD versions:set -DnewVersion="$VERSION-SNAPSHOT" -DgenerateBackupPoms=false
 git commit --all --message="build: bump version number to $VERSION-SNAPSHOT"
 
 exit 0
